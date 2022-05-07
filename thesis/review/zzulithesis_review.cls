@@ -1,7 +1,10 @@
+\newcommand{\inputCommon}[1]{\input{../../#1}}
+\newcommand{\IfFileExistsCommon}[1]{\IfFileExists{../../#1}}
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{zzulithesis_review}
     [Zhejiang University Thesis and Design Template, Zixuan Wang zxwang42@gmail.com]
-\input{config/version}
+\inputCommon{config/version}
 \wlog{zzulithesis_review version: \zzulithesisversion}
 
 \RequirePackage{kvoptions}
@@ -60,7 +63,7 @@
     ]{ctexrep}
 }
 
-\input{config/packages}
+\inputCommon{config/packages}
 
 % undergraduate
 \ifthenelse{\equal{\Type}{thesis}}
@@ -71,6 +74,6 @@
     \newcommand{\TitleTypeName}{郑州轻工业大学本科生毕业设计}
 }
 
-\input{config/path}
-\input{config/commands}
-\input{config/format/format}
+\inputCommon{config/path}
+\inputCommon{config/commands}
+\inputCommon{config/format/format}
