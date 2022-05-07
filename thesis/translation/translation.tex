@@ -1,0 +1,53 @@
+
+\documentclass[
+    % Debugging Settings
+    PrintFilePath   = false,            % print tex file path for each page
+    % Layout Settings
+    TwoSide         = true,             % set to false if don't need empty pages
+    % Thesis Info
+    StudentName     = 姓名,
+    StudentID       = 学号,
+    AdvisorName     = 指导教师,
+    Grade           = 2022,            % only the year, no '级'
+    Major           = 专业,
+    Department      = 学院,
+    SubmitDate      = 递交日期,
+    MajorFormat     = cs,
+    Degree          = undergraduate,   % 'undergraduate' or 'graduate'
+    Type            = thesis,          % 'thesis'   or 'design'
+    Period          = final,           % 'proposal' or 'final'
+    BlindReview     = false,           % 'false'    or 'true'
+    Language        = chinese,         % 'chinese'  or 'english'
+    % Title
+    Title           = 文献翻译题目,
+    TitleEng        = {{Graduation Thesis Title}}
+]{translation}
+
+%% Uncomment the following lines if you need multi line titles on cover pages
+\titletwolines{文献翻译题目第一行}{文献翻译题目第二行}
+\titleengtwolines{English Title Line One}{Englisht Title Line Two}
+
+%% Uncomment the following lines if you need multi line department names on cover pages
+% \departmenttwolines{学院名第一行}{学院名第二行}
+
+\newcommand{\inputundergraduate}
+{
+    % 文献综述部分
+    \newcommand{\undergradcurrstage}{proposal}
+    % \newrefsection
+
+    \coverstyle
+    \cleardoublepage
+
+    \inputpage{proposal/translation_cover}
+    \inputpage{proposal/previous}
+    
+    \bodystyle
+    \inputbody{content}
+}
+
+\begin{document}
+
+\inputundergraduate{}
+
+\end{document}
