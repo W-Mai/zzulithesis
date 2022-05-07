@@ -48,7 +48,7 @@
 {
     \ifthenelse{\equal{\Period}{final}}
     {
-        % Final thesis
+        % 毕业论文部分
         % Final part
         \newcommand{\undergradcurrstage}{final}
         \newrefsection
@@ -72,18 +72,18 @@
         % \poststyle
         % \inputpage{final/post}
 
-        % Proposal part
+        % 文献综述部分
         \renewcommand{\undergradcurrstage}{proposal}
-        \newrefsection
+        % \newrefsection
 
-        % \coverstyle
-        % \cleardoublepage
+        \coverstyle
+        \cleardoublepage
         % \ifthenelse{\equal{\Type}{design}}
         %     {\part{毕业设计开题报告}}
         %     {\part{毕业论文开题报告}}
 
-        % \inputpage{proposal/cover}
-        % \inputpage{proposal/previous}
+        \inputpage{proposal/cover}
+        \inputpage{proposal/previous}
         
         \bodystyle
         \inputbody{proposal/content}

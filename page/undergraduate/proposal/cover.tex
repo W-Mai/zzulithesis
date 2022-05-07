@@ -1,33 +1,25 @@
-\cleardoublepage{}
+\thispagestyle{empty}
+\setcounter{page}{-1}
 
 \hskip 40mm
 
-\begin{center}
-    \includegraphics[width=0.5\paperwidth]{logo/zjuchar.pdf}
-\end{center}
+
+% \begin{center}
+%     % \includegraphics[width=0.5\paperwidth]{logo/zjuchar.pdf}
+%     { \songti\zihao{2}\bfseries 郑州轻工业大学 }
+% \end{center}
 
 \begin{center}
-    \zihao{-1} \heiti \bfseries
-    \ifthenelse{\equal{\Type}{thesis}}
+    \zihao{-0} \setlength{\parskip}{-1em}\huawenxinwei
     {
-        本~~科~~生~~毕~~业~~论~~文
-        \\ \vskip 24pt
-        文献综述和开题报告
-    }
-    {
-        本~~科~~生~~毕~~业~~设~~计
-        \\ \vskip 24pt
-        开题报告
+        文献综述
     }
 \end{center}
 
-\vskip 40pt
+\vskip 20pt
 
-\begin{center}
-    \includegraphics[width=0.17\paperwidth]{logo/zju.pdf}
-\end{center}
+\vskip 5cm
 
-\vskip 40pt
 \ifthenelse{\equal{\BlindReview}{true}}
 {
     % in blind review
@@ -54,29 +46,29 @@
 {
     % not in blind review
     \begin{center}
-        \bfseries \zihao{3}
-        \begin{tabularx}{.7\textwidth}{>{\fangsong}l >{\fangsong}X<{\centering}}
-            \ifthenelse{\equal{\MajorFormat}{cs}}%
-            {%
-                \vspace{10.5pt} 学生姓名   & \uline{\hfill \StudentName \hfill} \\
-                \vspace{10.5pt} 学生学号   & \uline{\hfill \StudentID \hfill} \\
-                \vspace{10.5pt} 指导教师   & \uline{\hfill \AdvisorName \hfill} \\
-                \vspace{10.5pt} 年级与专业 & \uline{\hfill \mbox{\Grade}级\Major \hfill} \\
-                所在学院   & \uline{\hfill \Department \hfill} \\
+        \zihao{3}
+        \begin{tabularx}{.7\textwidth}{l X<{\centering}}
+            \CoverTitle
+            
+            \makebox[4em][s]{学生姓名} & \uline{\hfill \heiti\StudentName \hfill} \\
+            \makebox[4em][s]{专业班级}  &  \uline{\hfill \heiti\mbox{\Grade}级\Major \hfill} \\
+            \makebox[4em][s]{学号} & \uline{\hfill \heiti\StudentID \hfill} \\
+            \ifthenelse{\equal{\DepartmentLines}{1}}
+            {%   DepartmentLines == 1
+            \makebox[4em][s]{学院}    &  \uline{\hfill \heiti\Department \hfill} \\
+            % ~ & ~\\
             }
-            {%
-                姓名与学号 & \uline{\hfill \StudentName~\StudentID \hfill} \\
-                指导教师   & \uline{\hfill \AdvisorName \hfill}            \\
-                年级与专业 & \uline{\hfill \mbox{\Grade}级\Major \hfill}   \\
-                \ifthenelse{\equal{\DepartmentLines}{1}}
-                {%   DepartmentLines == 1
-                所在学院    &  \uline{\hfill \Department \hfill} \\
-                }
-                {%   DepartmentLines == 2
-                所在学院    &  \uline{\hfill \DepartmentLineOne \hfill} \\
-                            &  \uline{\hfill \DepartmentLineTwo \hfill} \\
-                }
+            {%   DepartmentLines == 2
+            学院    &  \uline{\hfill \heiti\DepartmentLineOne \hfill} \\
+            &  \uline{\hfill \heiti\DepartmentLineTwo \hfill} \\
+            ~ & ~\\
             }
+        \end{tabularx}
+        \begin{tabularx}{.7\textwidth}{l X<{\centering}}
+            指导教师（职称）   &  \uline{\hfill \heiti\AdvisorName \hfill} \\
+        \end{tabularx}
+        \begin{tabularx}{.7\textwidth}{l X<{\centering}}
+            \makebox[4em][s]{完成时间} & \uline{\hfill \heiti\SubmitDate \hfill} \\
         \end{tabularx}
     \end{center}
 }
