@@ -1,13 +1,13 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{zjuthesis}
+\ProvidesClass{zzulithesis}
     [Zhejiang University Thesis and Design Template, Zixuan Wang zxwang42@gmail.com]
 \input{config/version}
-\wlog{zjuthesis version: \zjuthesisversion}
+\wlog{zzulithesis version: \zzulithesisversion}
 
 \RequirePackage{kvoptions}
 
 \SetupKeyvalOptions{
-    family=zjuthesis,
+    family=zzulithesis,
     prefix=
 }
 \DeclareStringOption{StudentName}
@@ -65,10 +65,10 @@
 % undergraduate
 \ifthenelse{\equal{\Type}{thesis}}
 {
-    \newcommand{\TitleTypeName}{浙江大学本科生毕业论文}
+    \newcommand{\TitleTypeName}{郑州轻工业大学本科生毕业论文}
 }
 {
-    \newcommand{\TitleTypeName}{浙江大学本科生毕业设计}
+    \newcommand{\TitleTypeName}{郑州轻工业大学本科生毕业设计}
 }
 
 \input{config/path}
