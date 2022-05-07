@@ -10,6 +10,7 @@ diff/*
 *.ttc*
 *.nlg
 *.nls
+thesis/*/out/*
 
 ### Overleaf repo dir ###
 /zjuthesis/*

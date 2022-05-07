@@ -2,15 +2,15 @@
 \newcommand{\IfFileExistsCommon}[1]{\IfFileExists{../../#1}}
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{zzulithesis_review}
+\ProvidesClass{review}
     [Zhejiang University Thesis and Design Template, Zixuan Wang zxwang42@gmail.com]
 \inputCommon{config/version}
-\wlog{zzulithesis_review version: \zzulithesisversion}
+\wlog{review version: \zzulithesisversion}
 
 \RequirePackage{kvoptions}
 
 \SetupKeyvalOptions{
-    family=zzulithesis_review,
+    family=review,
     prefix=
 }
 \DeclareStringOption{StudentName}
