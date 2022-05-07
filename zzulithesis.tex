@@ -26,16 +26,12 @@
     Major           = 专业,
     Department      = 学院,
     SubmitDate      = 递交日期,
-    MajorFormat     = general,
+    MajorFormat     = cs,
     Degree          = undergraduate,   % 'undergraduate' or 'graduate'
     Type            = thesis,          % 'thesis'   or 'design'
     Period          = final,           % 'proposal' or 'final'
     BlindReview     = false,           % 'false'    or 'true'
     Language        = chinese,         % 'chinese'  or 'english'
-    % Graduate Thesis Info
-    GradLevel       = master,          % 'master' or 'doctor'
-    Topic           = 研究方向,
-    ColaboratorName = 合作导师,
     % Title
     Title           = 毕业论文/设计题目,
     TitleEng        = {{Graduation Thesis Title}}
@@ -117,31 +113,8 @@
     }
 }
 
-\newcommand{\inputgraduate}
-{
-    \coverstyle
-    \inputpage{cover}
-
-    \prevstyle
-    \inputpage{previous}
-    \inputpage{toc}
-    
-    % Main contents
-    \bodystyle
-    \inputbody{content}
-
-    % Post part
-    \poststyle
-    \inputbody{post}
-}
-
 \begin{document}
 
-\ifthenelse{\equal{\Degree}{undergraduate}}
-{
-    \inputundergraduate{}
-}
-{
-    \inputgraduate{}
-}
+\inputundergraduate{}
+
 \end{document}

@@ -25,8 +25,6 @@
 \DeclareStringOption[thesis]{Type}
 \DeclareStringOption[proposal]{Period}
 \DeclareStringOption[chinese]{Language}
-\DeclareStringOption[doctor]{GradLevel}
-\DeclareStringOption{ColaboratorName}
 \DeclareStringOption[false]{BlindReview}
 \DeclareStringOption[false]{PrintFilePath}
 \DeclareStringOption[true]{TwoSide}
@@ -39,7 +37,6 @@
 \wlog{Period: {\Period}}
 \wlog{BlindReview: {\BlindReview}}
 \wlog{Language: {\Language}}
-\wlog{GradLevel: {\GradLevel}}
 \wlog{PrintFilePath: {\PrintFilePath}}
 
 \PassOptionsToPackage{no-math}{fontspec}
@@ -65,44 +62,13 @@
 
 \input{config/packages}
 
-\ifthenelse{\equal{\Degree}{undergraduate}}
+% undergraduate
+\ifthenelse{\equal{\Type}{thesis}}
 {
-    % undergraduate
-    \ifthenelse{\equal{\Type}{thesis}}
-    {
-        \newcommand{\TitleTypeName}{浙江大学本科生毕业论文}
-    }
-    {
-        \newcommand{\TitleTypeName}{浙江大学本科生毕业设计}
-    }
+    \newcommand{\TitleTypeName}{浙江大学本科生毕业论文}
 }
 {
-    % graduate
-    \ifthenelse{\equal{\GradLevel}{doctor}}
-    {
-        % doctor
-        \ifthenelse{\equal{\Type}{thesis} \OR \equal{\Type}{design}}
-        {
-            % thesis or design
-            \newcommand{\TitleTypeName}{浙江大学博士学位论文}
-            \newcommand{\TitleTypeNameCover}{博士学位论文}
-        }
-        {}
-    }
-    {
-        % master
-        \ifthenelse{\equal{\Type}{thesis}}
-        {
-            % thesis
-            \newcommand{\TitleTypeName}{浙江大学硕士学位论文}
-            \newcommand{\TitleTypeNameCover}{硕士学位论文}
-        }
-        {
-            % design
-            \newcommand{\TitleTypeName}{浙江大学硕士专业学位论文}
-            \newcommand{\TitleTypeNameCover}{硕士专业学位论文}
-        }
-    }
+    \newcommand{\TitleTypeName}{浙江大学本科生毕业设计}
 }
 
 \input{config/path}
