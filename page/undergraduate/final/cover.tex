@@ -2,20 +2,21 @@
 \setcounter{page}{-1}
 
 \begin{flushright}
-    {\bfseries 涉密论文 $\square$ ~~ 公开论文 $\square$ \multido{}{6}{\quad}}
+    % {\bfseries 涉密论文 $\square$ ~~ 公开论文 $\square$ \multido{}{6}{\quad}}
 \end{flushright}
 
-\vskip 10mm
+% \vskip 10mm
 
 \begin{center}
-    \includegraphics[width=0.5\paperwidth]{logo/zjuchar.pdf}
+    % \includegraphics[width=0.5\paperwidth]{logo/zjuchar.pdf}
+    { \songti\zihao{2}\bfseries 郑州轻工业大学 }
 \end{center}
 
 \begin{center}
-    \zihao{-1} \heiti \bfseries
+    \zihao{-0} \setlength{\parskip}{-1em}\huawenxinwei
     \ifthenelse{\equal{\Type}{thesis}}
     {
-        本~科~生~毕~业~论~文
+        本科生毕业设计（论文）
     }
     {
         本~科~生~毕~业~设~计
@@ -24,26 +25,29 @@
 
 \vskip 20pt
 
-\begin{center}
-    \includegraphics[width=0.17\paperwidth]{logo/zju.pdf}
-\end{center}
+% 自阻力大学并没有设置logo
+% \begin{center}
+%     \includegraphics[width=0.17\paperwidth]{logo/zju.pdf}
+% \end{center}
 
-\vskip 20pt
+% \vskip 20pt
+
+\vskip 5cm
 
 % Define multi line title
 \ifthenelse{\equal{\TitleLines}{1}}
 {
     % TitleLines == 1
     \newcommand{\CoverTitle}{
-        题目      &  \uline{\hfill \Title{} \hfill} \\
+        \makebox[4em][s]{题目}      &  \uline{\hfill \heiti\Title{} \hfill} \\
         ~ & ~\\
     }
 }
 {
     % TitleLines == 2
     \newcommand{\CoverTitle}{
-        题目      &  \uline{\hfill \TitleLineOne{} \hfill} \\
-        ~        & \uline{\hfill \TitleLineTwo{} \hfill} \\
+        \makebox[4em][s]{题目}      &  \uline{\hfill \heiti\TitleLineOne{} \hfill} \\
+        ~        & \uline{\hfill \heiti\TitleLineTwo{} \hfill} \\
     }
 }
 
@@ -68,24 +72,29 @@
 {
     % not in blind review
     \begin{center}
-        \bfseries \zihao{3}
-        \begin{tabularx}{.7\textwidth}{>{\fangsong}l >{\fangsong}X<{\centering}}
+        \zihao{3}
+        \begin{tabularx}{.7\textwidth}{l X<{\centering}}
             \CoverTitle
             
-            姓名与学号 & \uline{\hfill \StudentName~\StudentID \hfill} \\
-            指导教师   &  \uline{\hfill \AdvisorName \hfill} \\
-            年级与专业  &  \uline{\hfill \mbox{\Grade}级\Major \hfill} \\
+            \makebox[4em][s]{学生姓名} & \uline{\hfill \heiti\StudentName \hfill} \\
+            \makebox[4em][s]{专业班级}  &  \uline{\hfill \heiti\mbox{\Grade}级\Major \hfill} \\
+            \makebox[4em][s]{学号} & \uline{\hfill \heiti\StudentID \hfill} \\
             \ifthenelse{\equal{\DepartmentLines}{1}}
             {%   DepartmentLines == 1
-            所在学院    &  \uline{\hfill \Department \hfill} \\
-                        ~ & ~\\
+            \makebox[4em][s]{学院}    &  \uline{\hfill \heiti\Department \hfill} \\
+            % ~ & ~\\
             }
             {%   DepartmentLines == 2
-            所在学院    &  \uline{\hfill \DepartmentLineOne \hfill} \\
-                        &  \uline{\hfill \DepartmentLineTwo \hfill} \\
-                        ~ & ~\\
+            学院    &  \uline{\hfill \heiti\DepartmentLineOne \hfill} \\
+            &  \uline{\hfill \heiti\DepartmentLineTwo \hfill} \\
+            ~ & ~\\
             }
-            递交日期 & \uline{\hfill \SubmitDate \hfill} \\
+        \end{tabularx}
+        \begin{tabularx}{.7\textwidth}{l X<{\centering}}
+            指导教师（职称）   &  \uline{\hfill \heiti\AdvisorName \hfill} \\
+        \end{tabularx}
+        \begin{tabularx}{.7\textwidth}{l X<{\centering}}
+            \makebox[4em][s]{完成时间} & \uline{\hfill \heiti\SubmitDate \hfill} \\
         \end{tabularx}
     \end{center}
 }
