@@ -3,7 +3,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{review}
-    [Zhejiang University Thesis and Design Template, Zixuan Wang zxwang42@gmail.com]
+    [Zhengzhou University of Light Industry Thesis and Design Template, W_Mai 1341398182@qq.com]
 \inputCommon{config/version}
 \wlog{review version: \zzulithesisversion}
 
