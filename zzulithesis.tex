@@ -60,30 +60,30 @@
         \inputpage{final/previous}
         \inputpage{final/toc}
 
-        \bodystyle
-        \cleardoublepage
-        \ifthenelse{\equal{\Type}{design}}
-            {\part{毕业设计}}
-            {\part{毕业论文}}
+        % \bodystyle
+        % \cleardoublepage
+        % \ifthenelse{\equal{\Type}{design}}
+        %     {\part{毕业设计}}
+        %     {\part{毕业论文}}
         
         \inputbody{final/content}
         \inputbody{final/post}
 
-        \poststyle
-        \inputpage{final/post}
+        % \poststyle
+        % \inputpage{final/post}
 
         % Proposal part
         \renewcommand{\undergradcurrstage}{proposal}
         \newrefsection
 
-        \coverstyle
-        \cleardoublepage
-        \ifthenelse{\equal{\Type}{design}}
-            {\part{毕业设计开题报告}}
-            {\part{毕业论文开题报告}}
+        % \coverstyle
+        % \cleardoublepage
+        % \ifthenelse{\equal{\Type}{design}}
+        %     {\part{毕业设计开题报告}}
+        %     {\part{毕业论文开题报告}}
 
-        \inputpage{proposal/cover}
-        \inputpage{proposal/previous}
+        % \inputpage{proposal/cover}
+        % \inputpage{proposal/previous}
         
         \bodystyle
         \inputbody{proposal/content}
