@@ -6,6 +6,7 @@
 THESIS_PATH = ./thesis
 SRCS 		= $(wildcard $(THESIS_PATH)/*)
 OBJ 		= $(patsubst $(THESIS_PATH)/%,%,$(SRCS))
+OUT_DIR 	= $(patsubst %,%/out,$(SRCS))
 
 list : $(SRCS)
 	@echo $(OBJ)
@@ -17,3 +18,14 @@ $(OBJ) : $(THESIS_PATH)/$@/*
 	@echo %%%%% Successfully %% With: $@
 	@echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+clean : $(SRCS)
+	@echo %%%%%%%%%%%%%%%%%%%%%%%%%%
+	@echo %%%%% cleaning... %%%%%%%%
+	@echo %%%%%%%%%%%%%%%%%%%%%%%%%%
+	@rm -rf $(OUT_DIR)
+	@echo %%%%%%%%%%%%%%%%%%%%%%%%%%
+	@echo %%%%% finished. %%%%%%%%%%
+	@echo %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+all : $(OBJ)
+	
