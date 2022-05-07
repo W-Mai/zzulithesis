@@ -35,7 +35,7 @@
     % Title
     Title           = 毕业论文/设计题目,
     TitleEng        = {{Graduation Thesis Title}}
-]{zzulithesis}
+]{zzulithesis_review}
 
 %% Uncomment the following lines if you need multi line titles on cover pages
 \titletwolines{毕业论文题目第一行}{毕业论文题目第二行}
@@ -48,26 +48,21 @@
 {
     \ifthenelse{\equal{\Period}{final}}
     {
-        % 毕业论文部分
-        % Final part
-        \newcommand{\undergradcurrstage}{final}
-        \newrefsection
-        
+        % 文献综述部分
+        \newcommand{\undergradcurrstage}{proposal}
+        % \newrefsection
+
         \coverstyle
-        \inputpage{final/cover}
-
-        \prevstyle
-        \inputpage{final/previous}
-        \inputpage{final/toc}
-
-        % \bodystyle
-        % \cleardoublepage
+        \cleardoublepage
         % \ifthenelse{\equal{\Type}{design}}
-        %     {\part{毕业设计}}
-        %     {\part{毕业论文}}
+        %     {\part{毕业设计开题报告}}
+        %     {\part{毕业论文开题报告}}
+
+        \inputpage{proposal/cover}
+        \inputpage{proposal/previous}
         
-        \inputbody{final/content}
-        \inputbody{final/post}
+        \bodystyle
+        \inputbody{proposal/content}
     }
     {
         % Thesis proposal

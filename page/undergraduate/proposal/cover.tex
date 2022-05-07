@@ -16,6 +16,23 @@
     }
 \end{center}
 
+% Define multi line title
+\ifthenelse{\equal{\TitleLines}{1}}
+{
+    % TitleLines == 1
+    \newcommand{\CoverTitle}{
+        \makebox[4em][s]{题目}      &  \uline{\hfill \heiti\Title{} \hfill} \\
+        ~ & ~\\
+    }
+}
+{
+    % TitleLines == 2
+    \newcommand{\CoverTitle}{
+        \makebox[4em][s]{题目}      &  \uline{\hfill \heiti\TitleLineOne{} \hfill} \\
+        ~        & \uline{\hfill \heiti\TitleLineTwo{} \hfill} \\
+    }
+}
+
 \vskip 20pt
 
 \vskip 5cm
