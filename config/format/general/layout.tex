@@ -17,61 +17,28 @@
     \renewcommand{\headrulewidth}{0pt}
 }
 
-\ifthenelse{\equal{\Degree}{undergraduate}}
+
+% Common header & footer
+\newcommand{\commonhead}
 {
-    % Common header & footer
-    \newcommand{\commonhead}
-    {
-        \fancyhead{}
-        \fancyhead[C]{\zihao{-5} \TitleTypeName}
-        \fancyhead[C]{\zihao{-5} \Title}
-        \renewcommand{\headrulewidth}{0.6pt}
-    }
-    % Common page header & footer
-    \fancypagestyle{common}
-    {
-        \commonhead{}
-        \fancyfoot{}
-        \fancyfoot[C]{\zihao{-5} \thepage}
-    }
-    % Previous part header & footer
-    \fancypagestyle{previous}
-    {
-        \commonhead{}
-        \fancyfoot{}
-        \fancyfoot[C]{\zihao{-5}\thepage}
-    }
+    \fancyhead{}
+    \fancyhead[C]{\zihao{-5} \TitleTypeName}
+    \fancyhead[C]{\zihao{-5} \Title}
+    \renewcommand{\headrulewidth}{0.6pt}
 }
+% Common page header & footer
+\fancypagestyle{common}
 {
-    \renewcommand{\chaptermark}[1]{\markboth{\CTEXthechapter\quad#1}{}}
-    \newcommand{\commonhead}
-    {
-        \fancyhead{}
-        \fancyhead[L]{\zihao{-5} \songti \TitleTypeName}
-        \fancyhead[R]{\zihao{-5} \songti \leftmark}
-        \renewcommand{\headrulewidth}{0.6pt}
-    }
-    \fancypagestyle{common}
-    {
-        \commonhead{}
-        \fancyfoot{}
-        \ifthenelse{\equal{\TwoSide}{true}}{
-            \fancyfoot[OR,EL]{\zihao{-5} \songti \thepage}
-        }{
-            \fancyfoot[C]{\zihao{-5} \songti \thepage}            
-        }
-    }
-    \fancypagestyle{previous}
-    {
-        \fancyhead{}
-        \fancyfoot{}
-        \ifthenelse{\equal{\TwoSide}{true}}{
-            \fancyfoot[OR,EL]{\zihao{-5} \songti \thepage}
-        }{
-            \fancyfoot[C]{\zihao{-5} \songti \thepage}            
-        }
-        \renewcommand{\headrulewidth}{0pt}
-    }
+    \commonhead{}
+    \fancyfoot{}
+    \fancyfoot[C]{\zihao{-5} \thepage}
+}
+% Previous part header & footer
+\fancypagestyle{previous}
+{
+    \commonhead{}
+    \fancyfoot{}
+    \fancyfoot[C]{\zihao{-5}\thepage}
 }
 
 % Explicitly remove plain page style
@@ -134,22 +101,6 @@
 \setlength{\cftsubsubsecindent} {6em}
 \setlength{\cftbeforechapskip}  {0em}
 
-% graduate template listoffigures/tables
-\ifthenelse{\equal{\Degree}{graduate}}
-{
-    % listoffigures
-    \newlength{\listoffiguresnamelen}
-    \renewcommand{\cftfigpresnum}{\figurename\enspace}
-    \settowidth{\listoffiguresnamelen}{\cftfigpresnum\cftfigaftersnum}
-    \addtolength{\cftfignumwidth}{\listoffiguresnamelen}
-
-    % listoftables
-    \newlength{\listoftablesnamelen}
-    \renewcommand{\cfttabpresnum}{\tablename\enspace}
-    \settowidth{\listoftablesnamelen}{\cfttabpresnum\cfttabaftersnum}
-    \addtolength{\cfttabnumwidth}{\listoftablesnamelen}
-}
-{}
 
 \newcommand{\coverstyle}
 {
@@ -180,17 +131,9 @@
 \newcommand{\poststyle}
 {
     \cleardoublepage{}
-    \ifthenelse{\equal{\Degree}{graduate}}
-    {
-        \assignpagestyle{\chapter}{common}
-        \thispagestyle{common}
-        \pagestyle{common}
-    }
-    {
-        \assignpagestyle{\chapter}{empty}
-        \thispagestyle{empty}
-        \pagestyle{empty}
-    }
+    \assignpagestyle{\chapter}{empty}
+    \thispagestyle{empty}
+    \pagestyle{empty}
 }
 
 % Bib layout

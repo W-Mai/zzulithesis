@@ -78,17 +78,13 @@
 
 \newcommand{\numberingstyle}
 {
-    \ifthenelse{\equal{\Degree}{undergraduate}}
-    {
-        \ifthenelse{\equal{\undergradcurrstage}{proposal}}
-        {
-            \chaptermajornumbering
-        }
-        {
-            \sectionmajornumbering
-        }
-    }
+
+    \ifthenelse{\equal{\undergradcurrstage}{proposal}}
     {
         \chaptermajornumbering
     }
+    {
+        \sectionmajornumbering
+    }
+
 }
