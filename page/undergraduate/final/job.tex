@@ -1,21 +1,49 @@
+\thispagestyle{empty}
 \cleardoublepage{}
-\sectionnonum{本科生毕业论文（设计）任务书}
+\coverstyle
 
+{   
+    \heiti
+    \centering\zihao{-3}郑州轻工业大学 \\
+    \bfseries 本科生毕业论文（设计）任务书 \\
+    \zihao{-4}~\\
+}
 {
-    \bfseries
-    \noindent 一、题目：\\
-    \noindent 二、指导教师对毕业论文（设计）的进度安排及任务要求：\\
+    {
+        \bfseries\noindent\heiti
+        题目\uline{\hfill\Title\hfill} \\
+        专业\uline{\hfill\Major\mbox{\Grade}\hfill}
+        学号\uline{\hfill\StudentID\hfill}
+        姓名\uline{\hfill\StudentName\hfill} \\
+        主要内容、基本要求、主要参考资料等: 
+        \vspace{1em}
+    }
+    {
+        \newcommand{\temptitle}[1]{{\noindent\zihao{4}\textbf{#1}}}
 
-    \vskip 50mm
-
-    \noindent 起讫日期 20 \quad 年 \quad  月 \quad  日 \quad 至 \quad 20 \quad  年 \quad  月  \quad 日
-    \begin{flushright}
-        \bfseries \zihao{-4}
-            指导教师（签名） \underline{\multido{}{5}{\quad}} 职称 \underline{\multido{}{5}{\quad}}
-    \end{flushright}
-
-    \noindent 三、系或研究所审核意见：\\
-
-    \mbox{} \vfill
-    \signature{负责人（签名）}
+        \temptitle{一、主要内容}
+        \par 主要内容主要内容主要内容主要内容主要内容主要内容主要内容主要内容主要内容主要内容主要内容主要内容主要内容主要内容主要内容主要内容主要内容主要内容
+    
+        \temptitle{二、基本要求}
+        \begin{enumerate}[label={\arabic*)}, leftmargin=4em]
+            \item 第一条第一条第一条第一条第一条第一条第一条第一条第一条第一条第一条第一条第一条第一条第一条第一条第一条第一条第一条第一条第一条第一条第一条第一条第一条第一条
+            \item 第二条
+            \item 第三条
+        \end{enumerate}
+        
+        \temptitle{三、主要参考资料}
+        \begin{enumerate}[label={[\arabic*]}, leftmargin=4em]
+            \item 王子轩. aasdasdasd浙江大学毕业设计/论文模板[EB/OL]. 2019. https://github.com/\\TheNetAdmin/zjuthesis.
+            \item W-Mai. 郑州轻工业大学毕业设计模板[EB/OL]. 2022. https://github.com/W-Mai/\\zzulithesis.
+        \end{enumerate}
+    }
+    {
+        ~\\
+        \noindent
+        \heiti\bfseries
+        \makebox[2em]{}\makebox[8em][s]{完成期限:}\makebox[15em][s]{\uline{\hfill\Deadline\hfill}} \\
+        \makebox[2em]{}\makebox[8em][s]{指导老师签名:}\makebox[15em][s]{\uline{\hfill~\hfill}} \\
+        \makebox[2em]{}\makebox[8em][s]{专业负责人签名:}\makebox[15em][s]{\uline{\hfill~\hfill}} \\
+        \makebox[8em]{}年\makebox[4em]{}月\makebox[4em]{}日
+    }
 }

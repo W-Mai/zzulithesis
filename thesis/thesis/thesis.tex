@@ -27,10 +27,11 @@
     StudentName     = 姓名,
     StudentID       = 学号,
     AdvisorName     = 指导教师,
-    Grade           = 2022,            % only the year, no '级'
+    Grade           = 18-1,            % only the year, no '级'
     Major           = 专业,
     Department      = 学院,
     SubmitDate      = 递交日期,
+    Deadline        = 完成期限,
     MajorFormat     = cs,
     Degree          = undergraduate,   % 'undergraduate' or 'graduate'
     Type            = thesis,          % 'thesis'   or 'design'
@@ -59,10 +60,10 @@
     \coverstyle
     \inputpage{final/cover}
 
-    \prevstyle
     \inputpage{final/previous}
     \inputpage{final/toc}
    
+    \bodystyle
     \inputbody{final/content}
     \inputbody{final/post}
 }

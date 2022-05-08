@@ -31,6 +31,7 @@
 \DeclareStringOption[false]{BlindReview}
 \DeclareStringOption[false]{PrintFilePath}
 \DeclareStringOption[true]{TwoSide}
+\DeclareStringOption{Deadline}
 
 \ProcessKeyvalOptions*
 

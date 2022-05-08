@@ -5,7 +5,12 @@
 		},
 		{
 			"path": "thesis"
+		},
+		{
+			"path": "page\\undergraduate"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"editor.wordWrap": "bounded"
+	}
 }
